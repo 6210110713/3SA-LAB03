@@ -1,15 +1,14 @@
-import React from 'react';
+import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import WordCard from './WordCard';
 import CharacterCard from './CharacterCard';
 const word = "Hello";
 function App() {
- return (
- <div>
- {
- Array.from(word).map((c, i) => <CharacterCard value={c} key={i}/>)
- }
- </div>
- );
+    return (
+        <div>
+        <WordCard value="hello"/>
+        </div>
+        );
 }
-
 export default App;
