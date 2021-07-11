@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import _ from 'lodash';
 import CharacterCard from './CharacterCard';
 const prepareStateFromWord = given_word => {
@@ -23,15 +22,15 @@ export default function WordCard(props){
     
     if(guess.length == state.word.length){
        if(guess == state.word){
-           console.log('yeah!')
+        alert("Won !!!!");
         setState({...state, completed: true})
     }else{
-    console.log('reset, next attemp')
-    setState({...state, guess: '', attempt: state.attempt + 1})
+        alert("Reset Play Again!!!!");
+        setState({...state, guess: '', attempt: state.attempt + 1})
     }
     }
     }
-
+    {
     return (
  <div>{
      state.chars.map((c, i) => 
@@ -39,4 +38,4 @@ export default function WordCard(props){
  )}
  </div>
  );
-}
+}}
