@@ -20,9 +20,10 @@ export default function WordCard(props){
     let guess = state.guess + c
     setState({...state, guess})
     
+    
     if(guess.length == state.word.length){
        if(guess == state.word){
-        alert("Won !!!!");
+        alert("Is True!!! ");
         setState({...state, completed: true})
     }else{
         alert("Reset Play Again!!!!");
@@ -36,9 +37,11 @@ export default function WordCard(props){
      state.chars.map((c, i) => 
      <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>
  )  }
-    <form onSubmit={props}>
-      <button class="button" type="submit">Reset</button>
-    </form>
+ <form onSubmit={props}>
+      <button class="button" type="submit">Next</button>
+        </form>
+
+    
 
       
  </div>
