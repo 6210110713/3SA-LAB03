@@ -37,7 +37,7 @@ export default function WordCard(props){
      state.chars.map((c, i) => 
      <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>
  )  }
- <form onSubmit={props}>
+    <form onSubmit={props}>
       <button class="button" type="submit">Next</button>
         </form>
 
