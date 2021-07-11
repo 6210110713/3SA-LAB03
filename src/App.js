@@ -3,12 +3,13 @@ import './App.css';
 import React from 'react';
 import WordCard from './WordCard';
 import CharacterCard from './CharacterCard';
-
-const a = 1;
+const word ="Stutus"
 function App() {  
     return (
-        <div>
-        <WordCard value="Stutus" />
+        <div class="clr2">
+        <font color="#00FF00" face="verdana" size="20" align="center" >เกมทายคำ</font>
+        <div class="font">
+        <WordCard value="Stutus" /></div>
         </div>
         );
 }

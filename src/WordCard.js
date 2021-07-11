@@ -16,7 +16,7 @@ export default function WordCard(props){
  const[state,setState] = useState(prepareStateFromWord(props.value))
  const activationHandler = c => {
     console.log(`${c} has been activated.`)
-    
+    let x = setState({...state, completed: true})
     let guess = state.guess + c
     setState({...state, guess})
     
@@ -36,10 +36,11 @@ export default function WordCard(props){
      state.chars.map((c, i) => 
      <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>
  )  }
-  <form onSubmit={props}>
-      <button type="submit">Reset</button>
+    <form onSubmit={props}>
+      <button class="button" type="submit">Reset</button>
     </form>
 
+      
  </div>
  );
 }}
